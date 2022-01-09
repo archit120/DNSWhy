@@ -48,6 +48,6 @@ def resolve(target_domain: str, server: str, root_server = "198.41.0.4") :
 
 if __name__ == "__main__":
     server = "198.41.0.4"
-    target_domain = "www.facebook.com"
+    target_domain = "archit.me"
     message = resolve(target_domain, server)
     
