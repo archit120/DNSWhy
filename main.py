@@ -1,4 +1,5 @@
 from network import *
+import sys
 
 def create_simple_query(target_domain: str, recursion = False, id=1):
     return Message(Header(id, 0, 0, 0, 0, recursion, 0, 0, 0, 1, 0, 0, 0), 
@@ -49,5 +50,8 @@ def resolve(target_domain: str, server: str, root_server = "198.41.0.4") :
 if __name__ == "__main__":
     server = "198.41.0.4"
     target_domain = "archit.me"
+
+    if len(sys.argv) > 1:
+        target_domain = sys.argv[1]
     message = resolve(target_domain, server)
     
